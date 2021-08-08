@@ -74,9 +74,9 @@ const Users = (props) => {
           <CDataTable
             items={users}
             fields={[
-              { key: 'full_name',label:'First Name', _classes: 'font-weight-bold' },
+              { key: 'name',label:'Name', _classes: 'font-weight-bold' },
               'planName',
-              'email', 'role', 'status'
+              'mobile', 'role', 'status'
             ]}
             hover
             striped

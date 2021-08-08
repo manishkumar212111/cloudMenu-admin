@@ -23,7 +23,7 @@ export const getUsers = ( page = 1) => ( dispatch ) =>{
 export const updateStatus = ( id, data) => ( dispatch ) =>{
   API.patch('UpdateUserById' , data , id , function(res){
         
-    if(res && res.data.email) {
+    if(res && res.data.id) {
         dispatch( 
           { type: "USER_STATUS_UPDATED",
             data : res.data
