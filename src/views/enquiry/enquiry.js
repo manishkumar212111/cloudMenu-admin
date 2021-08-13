@@ -3,6 +3,7 @@ import { useHistory, useLocation } from 'react-router-dom';
 
 import { getEnquirys , updateEnquiry} from "../../actions/enquiry";
 import { connect } from "react-redux";
+import ReadMoreReact from 'read-more-react';
 
 import {
   CBadge,
@@ -66,7 +67,7 @@ const Enquirys = (props) => {
             items={enquirys}
             fields={[
               "email","mobile",
-              'message', 'createdAt' , 'status'
+              'subject','description', 'createdAt' , 'status'
             ]}
             hover
             striped
@@ -85,7 +86,15 @@ const Enquirys = (props) => {
                 (item, index)=>{
                     return(<CSwitch className={'mx-1 mt-10'} onChange={() => handleStatusUpdate(item.id, item.status == 'resolved' ? 'pending' : "resolved")} shape={'pill'} color={'success'} labelOn={'\u2713'} labelOff={'\u2715'} defaultChecked = {item.status == 'resolved'} />
                     )
-                  },                
+                },
+                'description':
+                (item) => {
+                  return(<td>{item.description && <ReadMoreReact text={item.description}
+                    min={100}
+                    ideal={100}
+                    max={100}
+                    readMoreText="...read more"/>}</td>)
+                }               
             }}
           />
           <CPagination

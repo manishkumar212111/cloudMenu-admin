@@ -11,7 +11,7 @@ export const getEnquirys = ( page = 1, noAlert) => ( dispatch ) =>{
     API.get('Enquiry', {page : page} , "" , function(res){
     dispatch( 
       { type: "ENQUIRY_LIST",
-        data : res.data
+        data : res && res.data
       }
     );
 
