@@ -1,4 +1,5 @@
 import React from 'react';
+import Restaurant from './views/restaurant';
 
 const Toaster = React.lazy(() => import('./views/notifications/toaster/Toaster'));
 const Tables = React.lazy(() => import('./views/base/tables/Tables'));
@@ -87,6 +88,7 @@ const routes = [
   { path: '/notifications/toaster', name: 'Toaster', component: Toaster },
   { path: '/widgets', name: 'Widgets', component: Widgets },
   { path: '/users', exact: true,  name: 'Users', component: Users },
+  { path: '/restaurants/:status', exact: true,  name: 'Restaurants', component: Restaurant },
   { path: '/plan', exact: true,  name: 'Plans', component: Plans },
   { path: '/plan/add', exact: true,  name: 'Add Plans', component: PlanForm },
   { path: '/plan/:id', exact: true, name: 'Plan Details', component: PlanForm },

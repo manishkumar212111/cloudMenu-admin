@@ -25,7 +25,7 @@ const Login = (props) => {
   const [ password , setPassword ] = useState(null);
 
   useEffect(() => {
-    if(props.userDetail && props.userDetail.user){
+    if(props.userDetail && props.userDetail.user && props.userDetail.user.status){
         typeof localStorage !== 'undefined' &&  localStorage.setItem('userDetail', JSON.stringify(props.userDetail))
         window.location.href = '/';
       }

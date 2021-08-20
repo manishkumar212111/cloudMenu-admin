@@ -22,6 +22,34 @@ const _nav =  [
     //   text: 'NEW',
     // }
   },
+  {
+      _tag: 'CSidebarNavDropdown',
+      name: 'Restaurant',
+      // route: '/base',
+      icon: 'cil-puzzle',
+      _children: [
+        {
+          _tag: 'CSidebarNavItem',
+          name: 'Unborading Pending',
+          to: '/restaurants/pending',
+        },
+        {
+          _tag: 'CSidebarNavItem',
+          name: 'Approved',
+          to: '/restaurants/approved',
+        },]
+    },
+    
+  // {
+  //   _tag: 'CSidebarNavItem',
+  //   name: 'Restaurants',
+  //   to: '/restaurant',
+  //   icon: <CIcon name="human" customClasses="c-sidebar-nav-icon"/>,
+  //   // badge: {
+  //   //   color: 'info',
+  //   //   text: 'NEW',
+  //   // }
+  // },
   // {
   //   _tag: 'CSidebarNavItem',
   //   name: 'Plans',
