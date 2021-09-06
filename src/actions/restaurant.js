@@ -25,7 +25,7 @@ export const updateStatus = ( id, data) => ( dispatch ) =>{
       type : "PAGE_LOADING",
       data : {}
   })
-  API.patch('Restaurants' , data , id , function(res){
+  API.post('Restaurants' , data , id , function(res){
         
     if(res && res.data.id) {
         dispatch( 
