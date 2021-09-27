@@ -45,6 +45,7 @@ const Enquiry = React.lazy(() => import("./views/enquiry/enquiry"));
 const Cmss = React.lazy(() => import("./views/cmss/cmsList"));
 const CmsForm = React.lazy(() => import("./views/cmss/cmsForm"));
 const EmailTemplate = React.lazy(() => import("./views/emailTemplate/emailTemplate"));
+const OrderList = React.lazy(() => import("./views/order"))
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   
@@ -94,6 +95,7 @@ const routes = [
   { path: '/plan/:id', exact: true, name: 'Plan Details', component: PlanForm },
   { path: '/transactions', exact: true,  name: 'Transaction', component: Transaction },
   { path: '/enquiry', exact: true,  name: 'Enquiry', component: Enquiry },
+  { path: '/order/:id', exact: true, name: "Order", component : OrderList},
 
   { path: '/cms', exact: true,  name: 'Plans', component: Cmss },
   { path: '/cms/add', exact: true,  name: 'Add Plans', component: CmsForm },

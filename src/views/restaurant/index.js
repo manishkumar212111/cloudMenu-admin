@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useHistory, useLocation } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 
 import { getRestaurants , updateStatus } from "../../actions/restaurant";
 import { connect } from "react-redux";
@@ -102,7 +102,7 @@ const Restaurants = (props) => {
             fields={[
               { key: 'name',label:'Name', _classes: 'font-weight-bold' },
               { key: 'manager_name',label:'Manager Name', _classes: 'font-weight-bold' },
-              'mobile','email', 'city', 'full_address','status', 'action'
+              'mobile','email', 'city', 'full_address', 'Orders','status', 'action'
             ]}
             hover
             striped
@@ -123,6 +123,10 @@ const Restaurants = (props) => {
                 'status':
                 (item, index)=>{
                   return(<td>{item.status ? "Active" : "Inactive"}</td>)
+                },
+                'Orders':
+                (item, index)=>{
+                  return(<td><Link to={`/order/${item.id}`}>View</Link></td>)
                 }
             }}
           />

@@ -23,8 +23,14 @@ const EndPoints = {
     ResetPassword : {
         url : "/api/auth/reset-password"
     },
+    orderList: {
+        url: 'api/order',
+    },
     GetUserById : {
         url : "/api/users"
+    },
+    HomeByDate: {
+        url : "api/common/dashboard/bydate"
     },
     UpdateUserById : {
         url : "/api/users"
