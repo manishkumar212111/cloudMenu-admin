@@ -14,7 +14,7 @@ const _nav =  [
   },
   {
     _tag: 'CSidebarNavItem',
-    name: 'Customers',
+    name: 'Restaurant user',
     to: '/users',
     icon: <CIcon name="human" customClasses="c-sidebar-nav-icon"/>,
     // badge: {

@@ -89,7 +89,7 @@ const Detail = ({ content, approveCb }) => {
                   <p>{content.full_address}</p>
                 </div>
               </div>
-              <div class="row">
+              {/* <div class="row">
                 <div class="col-md-6">
                   <label>Opening Time</label>
                 </div>
@@ -104,7 +104,7 @@ const Detail = ({ content, approveCb }) => {
                 <div class="col-md-6">
                   <p>{content.closingTime}</p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
