@@ -155,13 +155,43 @@ const Dashboard = (props) => {
         <div className="row">
       <div className="col-12 px-5">
         <div className="row menu-header">
-          <div className="col-6 menu-heading">Orders</div>
+          <div className="menu-heading"><h4>Orders</h4></div>
         </div>
 
         <div className="row menu-display-container bg-white mt-4">
           <div className="col-12">
             <div className="row menu-display-header pt-3">
-              <div className="col-1 text-center menu-display-heading py-4">
+
+
+              
+  <table className="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Date/Time</th>
+        <th>Order Number</th>
+        <th>Table No</th>
+        <th>Payment Method</th>
+        <th>Status</th>
+        <th>Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+    {orders && orders.results && 
+              orders.results.length &&
+              orders.results.map((itm) => (
+      <tr>
+        <td>{moment(itm.createdAt).format("DD/MM/YYYY")} {moment(itm.createdAt).format("HH:mm")}</td>
+        <td>{itm.orderNo}</td>
+        <td>{itm.tableNo || "NA"}</td>
+        <td>{itm.paymentType}</td>
+        <td>{itm.paymentStatus}</td>
+        <td>SR {itm.totalAmount}</td>
+      </tr>
+      ))}
+    </tbody>
+  </table>
+
+              {/*<div className="col-1 text-center menu-display-heading py-4">
                 Date/Time
               </div>
               <div className="col-2 text-center menu-display-heading py-4">
@@ -181,9 +211,9 @@ const Dashboard = (props) => {
               </div>
               <div className="col-1 text-center menu-display-heading py-4">
                 Amount
-              </div>
+              </div>*/}
             </div>
-            {orders && orders.results && 
+          {/*  {orders && orders.results && 
               orders.results.length &&
               orders.results.map((itm) => (
                 <div className="row item-row py-4 align-items-center px-0">
@@ -198,7 +228,7 @@ const Dashboard = (props) => {
                   <div className="col-1 text-center test py-4">SR {itm.totalAmount}</div>
                   
                 </div>
-              ))}
+              ))}*/}
               <div className={'mt-2 '} style={{float: "right"}}>
                   <CPagination
                     activePage={page}

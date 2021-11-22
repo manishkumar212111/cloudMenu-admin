@@ -59,7 +59,7 @@ const Enquirys = (props) => {
       <CCol xl={12}>
         <CCard>
           <CCardHeader>
-            Enquirys
+            Inquirys
             {/* <small className="text-muted"> example</small> */}
           </CCardHeader>
           <CCardBody>

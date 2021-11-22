@@ -30,7 +30,7 @@ const _nav =  [
       _children: [
         {
           _tag: 'CSidebarNavItem',
-          name: 'Unborading Pending',
+          name: 'Onborading Pending',
           to: '/restaurants/pending',
         },
         {
@@ -72,7 +72,7 @@ const _nav =  [
   },
   {
     _tag: 'CSidebarNavItem',
-    name: 'Enquiry',
+    name: 'Inquiry',
     to: '/enquiry',
     icon: <CIcon name="human" customClasses="c-sidebar-nav-icon"/>,
     // badge: {
@@ -80,16 +80,20 @@ const _nav =  [
     //   text: 'NEW',
     // }
   },
-  {
-    _tag: 'CSidebarNavItem',
-    name: 'Cmss',
-    to: '/cms',
-    icon: <CIcon name="human" customClasses="c-sidebar-nav-icon"/>,
-    // badge: {
-    //   color: 'info',
-    //   text: 'NEW',
-    // }
-  },
+
+
+  // {
+  //   _tag: 'CSidebarNavItem',
+  //   name: 'Cmss',
+  //   to: '/cms',
+  //   icon: <CIcon name="human" customClasses="c-sidebar-nav-icon"/>,
+  //   // badge: {
+  //   //   color: 'info',
+  //   //   text: 'NEW',
+  //   // }
+  // },
+
+
   // {
   //   _tag: 'CSidebarNavItem',
   //   name: 'Email Templates',
