@@ -167,6 +167,7 @@ const Dashboard = (props) => {
   <table className="table table-striped table-hover">
     <thead>
       <tr>
+        <th>Restaurant Name</th>
         <th>Date/Time</th>
         <th>Order Number</th>
         <th>Table No</th>
@@ -180,9 +181,10 @@ const Dashboard = (props) => {
               orders.results.length &&
               orders.results.map((itm) => (
       <tr>
+        <td>{itm.resto_name[0].name}</td>
         <td>{moment(itm.createdAt).format("DD/MM/YYYY")} {moment(itm.createdAt).format("HH:mm")}</td>
         <td>{itm.orderNo}</td>
-        <td>{itm.tableNo || "NA"}</td>
+        <td>{itm.tableNo || "NA"}</td> 
         <td>{itm.paymentType}</td>
         <td>{itm.paymentStatus}</td>
         <td>SR {itm.totalAmount}</td>
